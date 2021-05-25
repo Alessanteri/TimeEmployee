@@ -1,0 +1,357 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-21 15:06+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: .\EmployeeTimeTracker\urls.py:10
+msgid "admin/"
+msgstr ""
+
+#: .\home\templates\home\index.html:6 .\home\templates\home\main.html:61
+msgid "User"
+msgstr "Użytkownik"
+
+#: .\home\templates\home\index.html:22
+#: .\timecard\templates\timecard\allrecord.html:24
+#: .\timecard\templates\timecard\allrecord.html:40
+#: .\timecard\templates\timecard\getreport.html:27
+#: .\timecard\templates\timecard\getreport.html:43
+#: .\timecard\templates\timecard\record.html:23
+#: .\timecard\templates\timecard\record.html:37
+#: .\timecard\templates\timecard\record_object.html:21
+#: .\timecard\templates\timecard\record_object.html:30
+#: .\timecard\templates\timecard\report.html:23
+#: .\timecard\templates\timecard\report.html:33 .\timecard\views.py:131
+msgid "Duration"
+msgstr "Ciąg"
+
+#: .\home\templates\home\index.html:31
+msgid "Role"
+msgstr "Rola"
+
+#: .\home\templates\home\index.html:40
+msgid "Phone Number"
+msgstr "Numer telefonu"
+
+#: .\home\templates\home\index.html:49
+msgid "Rate Per Hour"
+msgstr "Stawka za godzinę"
+
+#: .\home\templates\home\index.html:62
+msgid "Area Chart Example"
+msgstr "Przykład wykresu warstwowego"
+
+#: .\home\templates\home\index.html:71
+msgid "Bar Chart Example"
+msgstr "Przykład wykresu słupkowego"
+
+#: .\home\templates\home\index.html:79
+msgid "Please Create or Update profile from settings."
+msgstr "Utwórz lub zaktualizuj profil w ustawieniach."
+
+#: .\home\templates\home\main.html:45
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: .\home\templates\home\main.html:48
+msgid "Logout"
+msgstr "Wyloguj"
+
+#: .\home\templates\home\main.html:58
+msgid "Menu"
+msgstr "Menu"
+
+#: .\home\templates\home\main.html:65
+msgid "Check IN/OUT"
+msgstr "Licznik"
+
+#: .\home\templates\home\main.html:69
+msgid "Record"
+msgstr "Zapis"
+
+#: .\home\templates\home\main.html:72
+msgid "Interface"
+msgstr "Interfejs"
+
+#: .\home\templates\home\main.html:75
+msgid "All Staff Records"
+msgstr "Wszystkie raporty pracowników"
+
+#: .\home\templates\home\main.html:83
+msgid "GetReport"
+msgstr "Pobierz raport"
+
+#: .\home\templates\home\main.html:87
+msgid "Add object"
+msgstr "Dodaj obiekt"
+
+#: .\home\templates\home\main.html:91
+msgid " Add worker"
+msgstr "Dodaj pracownika"
+
+#: .\home\templates\home\main.html:154
+msgid "Logged in as:"
+msgstr "Jesteś zalogowany jako:"
+
+#: .\home\templates\home\user.html:3
+msgid "Welcome to User page."
+msgstr "Witamy na stronie użytkownika."
+
+#: .\home\views.py:23
+msgid "Hello"
+msgstr ""
+
+#: .\loginmanager\templates\loginmanager\login.html:35
+#: .\loginmanager\templates\loginmanager\login.html:59
+msgid "Login"
+msgstr "Wejście"
+
+#: .\loginmanager\templates\loginmanager\login.html:41
+#: .\timecard\templates\timecard\allrecord.html:20
+#: .\timecard\templates\timecard\allrecord.html:36
+#: .\timecard\templates\timecard\getreport.html:23
+#: .\timecard\templates\timecard\getreport.html:39
+#: .\timecard\templates\timecard\record_object.html:18
+#: .\timecard\templates\timecard\record_object.html:27
+#: .\timecard\templates\timecard\report.html:19
+#: .\timecard\templates\timecard\report.html:29 .\timecard\views.py:131
+msgid "Username"
+msgstr "Nazwa Użytkownika"
+
+#: .\loginmanager\templates\loginmanager\login.html:46
+#, fuzzy
+#| msgid "Type Password"
+msgid "Password"
+msgstr "Wpisz hasło"
+
+#: .\loginmanager\templates\loginmanager\login.html:53
+msgid "Remember password?"
+msgstr "Zapamiętaj hasło?"
+
+#: .\loginmanager\templates\loginmanager\login.html:57
+msgid "Forgot Password?"
+msgstr "Zapamiętaj hasło"
+
+#: .\loginmanager\templates\loginmanager\profile.html:11
+msgid "Profile"
+msgstr "Profil"
+
+#: .\loginmanager\templates\loginmanager\profile.html:22 .\test\views.py:8
+msgid "first name"
+msgstr "Imię"
+
+#: .\loginmanager\templates\loginmanager\profile.html:26
+msgid "last name"
+msgstr "Nazwisko"
+
+#: .\loginmanager\templates\loginmanager\profile.html:30
+msgid "Email"
+msgstr "Email"
+
+#: .\loginmanager\templates\loginmanager\profile.html:34
+msgid "Phone"
+msgstr "Telefon"
+
+#: .\loginmanager\templates\loginmanager\profile.html:38
+msgid "Gender"
+msgstr "Płeć"
+
+#: .\loginmanager\templates\loginmanager\profile.html:42
+msgid "Address"
+msgstr "Adres"
+
+#: .\loginmanager\templates\loginmanager\profile.html:46
+msgid "Bank name"
+msgstr "Nazwa banku"
+
+#: .\loginmanager\templates\loginmanager\profile.html:50
+msgid "Bank account"
+msgstr "Numer rachunku"
+
+#: .\loginmanager\templates\loginmanager\profile.html:64
+msgid "Update Information"
+msgstr "Aktualizuj informacje"
+
+#: .\loginmanager\templates\loginmanager\register.html:32
+msgid "Your Username"
+msgstr "Twój użytkownik"
+
+#: .\loginmanager\templates\loginmanager\register.html:38
+msgid "Your Email A/C"
+msgstr "Twój e-mail"
+
+#: .\loginmanager\templates\loginmanager\register.html:44
+msgid "Type Password"
+msgstr "Wpisz hasło"
+
+#: .\loginmanager\templates\loginmanager\register.html:50
+msgid "Password again"
+msgstr "Hasło ponownie"
+
+#: .\loginmanager\templates\loginmanager\register.html:56
+msgid "Create Account"
+msgstr "Załóż konto"
+
+#: .\test\templates\test\index.html:3
+msgid "This is Test File"
+msgstr "To jest plik testowy"
+
+#: .\timecard\templates\timecard\add_object.html:6
+msgid "Add Object"
+msgstr "Dodaj obiekt"
+
+#: .\timecard\templates\timecard\add_object.html:11
+msgid "Object :"
+msgstr "Obiekt: "
+
+#: .\timecard\templates\timecard\add_object.html:15
+msgid "Add"
+msgstr "Dodaj"
+
+#: .\timecard\templates\timecard\allrecord.html:6
+#: .\timecard\templates\timecard\record.html:6
+msgid "Records"
+msgstr "Wpis"
+
+#: .\timecard\templates\timecard\allrecord.html:12
+msgid "All Staffs Daily Login Reports"
+msgstr "Codzienne raporty logowania użytkowników"
+
+#: .\timecard\templates\timecard\allrecord.html:21
+#: .\timecard\templates\timecard\allrecord.html:37
+#: .\timecard\templates\timecard\getreport.html:24
+#: .\timecard\templates\timecard\getreport.html:40
+#: .\timecard\templates\timecard\index.html:14
+#: .\timecard\templates\timecard\record.html:21
+#: .\timecard\templates\timecard\record.html:35
+#: .\timecard\templates\timecard\record_object.html:6
+#: .\timecard\templates\timecard\report.html:20
+#: .\timecard\templates\timecard\report.html:30
+#: .\timecard\templates\timecard\report.html:41
+msgid "Object"
+msgstr "Obiekt"
+
+#: .\timecard\templates\timecard\allrecord.html:22
+#: .\timecard\templates\timecard\allrecord.html:38
+#: .\timecard\templates\timecard\getreport.html:25
+#: .\timecard\templates\timecard\getreport.html:41
+#: .\timecard\templates\timecard\record.html:20
+#: .\timecard\templates\timecard\record.html:34
+#: .\timecard\templates\timecard\record_object.html:19
+#: .\timecard\templates\timecard\record_object.html:28
+#: .\timecard\templates\timecard\report.html:21
+#: .\timecard\templates\timecard\report.html:31 .\timecard\views.py:131
+msgid "CheckIn Time"
+msgstr "Zaczni"
+
+#: .\timecard\templates\timecard\allrecord.html:23
+#: .\timecard\templates\timecard\allrecord.html:39
+#: .\timecard\templates\timecard\getreport.html:26
+#: .\timecard\templates\timecard\getreport.html:42
+#: .\timecard\templates\timecard\record.html:22
+#: .\timecard\templates\timecard\record.html:36
+#: .\timecard\templates\timecard\record_object.html:20
+#: .\timecard\templates\timecard\record_object.html:29
+#: .\timecard\templates\timecard\report.html:22
+#: .\timecard\templates\timecard\report.html:32 .\timecard\views.py:131
+msgid "CheckOut Time"
+msgstr "Sprawdź czas"
+
+#: .\timecard\templates\timecard\allrecord.html:26
+#: .\timecard\templates\timecard\getreport.html:29
+#: .\timecard\templates\timecard\record.html:25 .\timecard\views.py:158
+msgid "Total"
+msgstr "Łącznie"
+
+#: .\timecard\templates\timecard\allrecord.html:31
+#: .\timecard\templates\timecard\getreport.html:34
+#: .\timecard\templates\timecard\record.html:29
+msgid "hour"
+msgstr "godzina"
+
+#: .\timecard\templates\timecard\allrecord.html:31
+#: .\timecard\templates\timecard\getreport.html:34
+#: .\timecard\templates\timecard\record.html:29
+msgid "minutes"
+msgstr "minuty"
+
+#: .\timecard\templates\timecard\getreport.html:6
+#: .\timecard\templates\timecard\report.html:6
+msgid "Reports"
+msgstr "Raporty"
+
+#: .\timecard\templates\timecard\getreport.html:10
+msgid "Object: "
+msgstr "Obiekt: "
+
+#: .\timecard\templates\timecard\getreport.html:11
+msgid "User: "
+msgstr "Użytkownik: "
+
+#: .\timecard\templates\timecard\getreport.html:12
+msgid "From: "
+msgstr "Od: "
+
+#: .\timecard\templates\timecard\getreport.html:13
+msgid "To: "
+msgstr "Do"
+
+#: .\timecard\templates\timecard\getreport.html:14
+#: .\timecard\templates\timecard\report.html:11
+msgid "Search"
+msgstr "Szukaj"
+
+#: .\timecard\templates\timecard\getreport.html:15
+msgid "Download"
+msgstr "Pobieranie"
+
+#: .\timecard\templates\timecard\index.html:6
+msgid "Time Register"
+msgstr "Rejestr czasu"
+
+#: .\timecard\templates\timecard\index.html:25
+msgid "Check In"
+msgstr "Zaczni"
+
+#: .\timecard\templates\timecard\index.html:32
+msgid "You have checked In at"
+msgstr "Został wpisany o"
+
+#: .\timecard\templates\timecard\index.html:33
+msgid "Check Out"
+msgstr "Zakończ"
+
+#: .\timecard\templates\timecard\record.html:12
+msgid "Your Daily Login Reports"
+msgstr "Twoje dzienne raporty logowania"
+
+#: .\timecard\views.py:131
+msgid "Payment"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Object: "
+#~ msgid "Objectsdhgdfh: "
+#~ msgstr "Obiekt"
+
+#, fuzzy
+#~| msgid "User"
+#~ msgid "Userdfshdfh: "
+#~ msgstr "Użytkownik: "

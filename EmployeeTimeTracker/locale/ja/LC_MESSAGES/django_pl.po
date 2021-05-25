@@ -1,0 +1,79 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-13 12:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+
+#main
+msgid "Settings"
+msgstr "Ustawienia"
+
+msgid "Logout"
+msgstr "Wyloguj"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "User"
+msgstr "Użytkownik"
+
+msgid "Check IN/OUT"
+msgstr "Licznik"
+
+msgid "Record"
+msgstr "Zapis"
+
+msgid "All Staff Records"
+msgstr "Wszystkie raporty pracowników"
+
+msgid "GetReport"
+msgstr "Pobierz raport"
+
+msgid "Добавить объект"
+msgstr "Dodaj obiekt"
+
+msgid "Add worker"
+msgstr "Dodaj pracownika"
+
+msgid "Вы вошли как:"
+msgstr "Jesteś zalogowany jako:"
+
+#user
+
+msgid "Welcome to User page."
+msgstr "Witamy na stronie użytkownika."
+
+#index
+
+#msgid "User"
+#msgstr "Użytkownik"
+
+msgid "Duration"
+msgstr "Ciąg"
+
+msgid "Role"
+msgstr "Rola"
+
+msgid "Phone Number"
+msgstr "Numer telefonu"
+
+msgid "Rate Per Hour"
+msgstr "Stawka za godzinę"
+
+msgid "Area Chart Example"
+msgstr "Przykład wykresu warstwowego"
+
+msgid "Bar Chart Example"
+msgstr "Przykład wykresu słupkowego"
+
+msgid "Please Create or Update profile from settings."
+msgstr "Utwórz lub zaktualizuj profil w ustawieniach."

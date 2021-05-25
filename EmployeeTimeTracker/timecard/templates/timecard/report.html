@@ -1,0 +1,53 @@
+{% extends 'home/main.html' %}
+{% load i18n %}
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">{% trans "Reports" %}</h1>
+    </div>
+    <div class="card mb-4">
+        <form method="get">
+            {{ myFilter.form.as_p }}
+            <button class="btn btn-primary" type="submit">{% trans "Search" %}</button>
+        </form>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>{% trans "Username" %}</th>
+                        <th>{% trans "Object" %}</th>
+                        <th>{% trans "CheckIn Time" %}</th>
+                        <th>{% trans "CheckOut Time" %}</th>
+                        <th>{% trans "Duration" %}</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>#</th>
+                        <th>{% trans "Username" %}</th>
+                        <th>{% trans "Object" %}</th>
+                        <th>{% trans "CheckIn Time" %}</th>
+                        <th>{% trans "CheckOut Time" %}</th>
+                        <th>{% trans "Duration" %}</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    {% for r in records %}
+                    <tr>
+                        <th scope="row">#</th>
+                        <td>{{ r.user.username }}</td>
+                        <th>{% trans "Object" %}</th>
+                        <td>{{ r.checkin_time }}</td>
+                        <td>{{ r.checkout_time }}</td>
+                        <td>{{ r.checkout_time|timeuntil:r.checkin_time }}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

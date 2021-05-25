@@ -1,0 +1,20 @@
+{% extends 'home/main.html' %}
+{% load i18n %}
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">{% trans "Add Object" %}</h1>
+<!--        {{ name }} {{ now }} {{ current }} {{ user.id }}-->
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">{% trans "Object :" %}</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message_object"></textarea>
+                <input type="hidden" name="user">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">{% trans "Add" %}</button>
+        </form>
+        <div class="result"></div>
+    </div>
+</main>
+{% endblock %}

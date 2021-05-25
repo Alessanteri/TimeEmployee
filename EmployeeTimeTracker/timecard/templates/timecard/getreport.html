@@ -1,0 +1,63 @@
+{% extends 'home/main.html' %}
+{% load i18n %}
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">{% trans "Reports" %}</h1>
+    </div>
+    <div class="card mb-4">
+        <form method="get">
+            <p>{% trans "Object: " %}{{ myFilter.form.message_object }}</p>
+            <p>{% trans "User: " %}{{ myFilter.form.user }}</p>
+            <p>{% trans "From: " %}{{ myFilter.form.start_date }}</p>
+            <p>{% trans "To: " %}{{ myFilter.form.end_date }}</p>
+            <button class="btn btn-primary" type="submit"  name="search">{% trans "Search" %}</button>
+            <button class="btn btn-primary" type="submit" name="download">{% trans "Download" %}</button>
+        </form>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>{% trans "Username" %}</th>
+                        <th>{% trans "Object" %}</th>
+                        <th>{% trans "CheckIn Time" %}</th>
+                        <th>{% trans "CheckOut Time" %}</th>
+                        <th>{% trans "Duration" %}</th>
+                    </tr>
+                    <th>{% trans "Total" %}</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{ time_work.0 }} {% trans "hour" %}, {{ time_work.1 }} {% trans "minutes" %}</td>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>#</th>
+                        <th>{% trans "Username" %}</th>
+                        <th>{% trans "Object" %}</th>
+                        <th>{% trans "CheckIn Time" %}</th>
+                        <th>{% trans "CheckOut Time" %}</th>
+                        <th>{% trans "Duration" %}</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    {% for r in records %}
+                    <tr>
+                        <th scope="row">#</th>
+                        <td>{{ r.user.username }}</td>
+                        <td>{{ r.message_object }}</td>
+                        <td>{{ r.checkin_time }}</td>
+                        <td>{{ r.checkout_time }}</td>
+                        <td>{{ r.checkout_time|timeuntil:r.checkin_time }}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "home/main.html" %}
+{% load i18n %}
+{% block content %}
+<main>
+    <div class="container-fluid">
+        {% for message in messages %}
+        <div class="alert alert-info" role="alert">
+            {{message}}
+        </div>
+        {% endfor %}
+        <h1 class="mt-4">{% trans "Profile" %}</h1>
+<!--        <form method="post" action="#" enctype="multipart/form-data">-->
+<!--            {% csrf_token %}-->
+<!--            {{ form.as_table }}-->
+<!--            <p>{{ form.errors }}</p>-->
+<!--            <input class="btn btn-success" type="submit" value="Update Information">-->
+<!--        </form>-->
+        <form method="post" action="#" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table class="table">
+                <tr class="table">
+                        <td width="20%">{% trans "first name" %} :</td>
+                        <td>{{ form.first_name }}</td>
+                </tr>
+                <tr class="table">
+                        <td width="20%">{% trans "last name" %} :</td>
+                        <td>{{ form.last_name }}</td>
+                </tr>
+                <tr class="table">
+                        <td width="20%">{% trans "Email" %} :</td>
+                        <td>{{ form.email }}</td>
+                </tr>
+                <tr class="table">
+                        <td width="20%">{% trans "Phone" %} :</td>
+                        <td>{{ form.phone }}</td>
+                </tr>
+                <tr class="table">
+                        <td width="20%">{% trans "Gender" %} :</td>
+                        <td>{{ form.gender }}</td>
+                </tr>
+                <tr class="table">
+                        <td width="20%">{% trans "Address" %} :</td>
+                        <td>{{ form.address }}</td>
+                </tr>
+                <tr class="table">
+                        <td width="20%">{% trans "Bank name" %} :</td>
+                        <td>{{ form.bank_name }}</td>
+                </tr>
+                <tr class="table">
+                        <td width="20%">{% trans "Bank account" %} :</td>
+                        <td>{{ form.bank_account }}</td>
+                </tr>
+<!--            {% for field in form %}-->
+<!--                    {{ field.errors }}-->
+<!--                    <tr class="table">-->
+<!--                        <td width="20%">{{ field.label_tag }}</td>-->
+<!--                        <td>{{ field }}</td>-->
+<!--                    </tr>-->
+<!--                    {% if field.help_text %}-->
+<!--                    <p class="help">{{ field.help_text|safe }}</p>-->
+<!--                    {% endif %}-->
+<!--            {% endfor %}-->
+            </table>
+            <button class="btn btn-success" type="submit" value="Update Information">{% trans "Update Information" %}</button>
+        </form>
+    </div>
+</main>
+{% endblock %}

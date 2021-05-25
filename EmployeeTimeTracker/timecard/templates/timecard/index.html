@@ -1,0 +1,43 @@
+{% extends 'home/main.html' %}
+{% load i18n %}
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">{% trans "Time Register" %}</h1>
+<!--        {{ name }} {{ now }} {{ current }} {{ checkin_status }}-->
+        <form method="post" action="">
+            {% csrf_token %}
+            {% if checkin_status == 0 %}
+<!--            <p>{{ checkin_time }}</p>-->
+            <p>{{ checkin_time }}</p>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">{% trans "Object" %} :</label>
+                <select name="select_object" class="u12-branch" id="exampleFormControlSelect1">
+                    {% for i in message_list %}
+                        {% if message_object == i.message_object %}
+                            <option value = "{{ i.message_object.id }}" selected>{{ i.message_object }}</option>
+                        {% else %}
+                            <option value = "{{ i.message_object }}">{{ i.message_object }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" name="checkin">{% trans "Check In" %}</button>
+            <div class="form-group">
+                <input type="hidden" name="user" value="{{ user.id }}"/>
+<!--                <input type="hidden" name="message_object" value="2"/>-->
+                <input type="hidden" name="status" value="1">
+            </div>
+            {% else %}
+            <p>{% trans "You have checked In at" %} {{ checkin_time }}</p>
+            <button type="submit" class="btn btn-primary btn-lg" name="checkout">{% trans "Check Out" %}</button>
+            <div class="form-group">
+                <input type="hidden" name="user" value="{{ user.id }}"/>
+                <input type="hidden" name="status" value="0">
+            </div>
+            {% endif %}
+
+        </form>
+    </div>
+</main>
+{% endblock %}

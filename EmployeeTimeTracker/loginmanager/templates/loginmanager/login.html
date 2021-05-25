@@ -1,0 +1,71 @@
+{% extends 'loginmanager/main.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+<main>
+{% for message in messages %}
+<div class="alert alert-info" role="alert">
+  {{message}}
+</div>
+{% endfor %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                    {% get_current_language as LANGUAGE_CODE %}
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                    <div class="card-header">
+                        <form method="post" action="{% url 'set_language' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="text" value="{{ redirect_to }}">
+                            <select name="language" id="" onchange="this.form.submit()">
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                                {% endfor %}
+                            </select>
+<!--                            <input type="submit" value="Go">-->
+                        </form>
+                        <h3 class="text-center font-weight-light my-4">{% trans "Login" %}</h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label class="small mb-1" for="inputEmailAddress">{% trans "Username" %}</label>
+                                <input class="form-control py-4" id="inputEmailAddress" type="text" name="username"
+                                       placeholder="Enter Username"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="small mb-1" for="inputPassword">{% trans "Password" %}</label>
+                                <input class="form-control py-4" id="inputPassword" type="password" name="password"
+                                       placeholder="Enter password"/>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox"/>
+                                    <label class="custom-control-label" for="rememberPasswordCheck">{% trans "Remember password?" %}</label>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                                <a class="small" href="#">{% trans "Forgot Password?" %}</a>
+<!--                                <a class="btn btn-primary" href="index.html">Login</a>-->
+                                <button class="btn btn-primary" type="submit" name="submit">{% trans "Login" %}</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <div class="small"><a href="{% url 'loginmanager-register' %}"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock content %}

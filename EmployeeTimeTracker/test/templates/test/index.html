@@ -1,0 +1,22 @@
+{% load i18n %}
+{{ firstname }}<br/>
+{% trans "This is Test File" %}
+
+<div class="container">
+    {% get_current_language as LANGUAGE_CODE %}
+    {{ LANGUAGE_CODE }}
+    <form method="post" action="{% url 'set_language' %}">
+        {% csrf_token %}
+        <input type="hidden" name="text" value="{{ redirect_to }}">
+        <select name="language" id="">
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+                <option value="{{ language.code }}" {% if lanauage.code == LANGUAGE_CODE %} selected {% endif %}>
+                    {{ language.name_local }} ({{ language.code }})
+                </option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Go">
+    </form>
+</div>
